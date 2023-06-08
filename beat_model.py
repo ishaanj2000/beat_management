@@ -45,11 +45,11 @@ cfp = os.path.dirname(cv2.__file__) + "/data/haarcascade_frontalface_alt2.xml"
 fc = cv2.CascadeClassifier(cfp)
 
 # load the known faces and embeddings saved in last file
-data = pickle.loads(open('/content/face_enc', "rb").read())
-
+#data = pickle.loads(open('/content/face_enc', "rb").read())
+data = pickle.loads(open('beat_management/face_enc', "rb").read())
 
 # Find path to the image you want to detect face and pass it here
-image = cv2.imread('/content/drive/MyDrive/ML LAB/lfw/Prince_William/Prince_William_0001.jpg')
+image = cv2.imread('beat_management/lfw/Prince_William/Prince_William_0001.jpg')
 #image = cv2.resize(image, (0, 0), fx = 0.1, fy = 0.1)
 rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 # convert image to Greyscale for HaarCascade
