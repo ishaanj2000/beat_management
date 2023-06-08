@@ -93,6 +93,6 @@ for ((x, y, w, h), name) in zip(faces, names):
     # draw the predicted face name on the image
     cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
     cv2.putText(image, name, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
-cv2_imshow(image)
+#cv2_imshow(image)
 print(name)
 cv2.waitKey(0)
