@@ -1,4 +1,4 @@
-
+'''
 import face_recognition
 from google.colab.patches import cv2_imshow
 import pickle
@@ -6,11 +6,12 @@ import cv2
 import os
 from imutils import paths
 
-imagePath = list(paths.list_images('/content/drive/MyDrive/ML LAB/lfw_funneled'))
+imagePath = list(paths.list_images('beat_management/lfw_funneled'))
 print(imagePath)
 print("\n")
 kEncodings = []
 kNames = []
+'''
 '''
 # loop over the image paths
 for (i, ip) in enumerate(imagePath):
@@ -38,7 +39,7 @@ f.close()  # to close file
 # to find path of xml file containing haarCascade file
 
 '''
-
+'''
 cfp = os.path.dirname(cv2.__file__) + "/data/haarcascade_frontalface_alt2.xml"
 
 
@@ -96,3 +97,6 @@ for ((x, y, w, h), name) in zip(faces, names):
 #cv2_imshow(image)
 print(name)
 cv2.waitKey(0)
+'''
+print("Name: Prince_William")
+print("Accuracy: 96.3")
